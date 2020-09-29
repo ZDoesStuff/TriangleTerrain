@@ -7,4 +7,6 @@ local ChunkModule = Modules:WaitForChild("ChunkModule")
 local r = require
 local Chunks = r(ChunkModule)
 
-Chunks:CreateTriangles(Chunks:CreateGrid(), workspace.Triangles)
+local Chunk = Chunks.new(nil, workspace.Triangles)
+wait(5)
+Chunk:Destroy()

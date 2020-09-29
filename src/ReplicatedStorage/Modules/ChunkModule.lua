@@ -1,4 +1,10 @@
 local ChunkModule = {}
+ChunkModule.__index = ChunkModule
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Modules = ReplicatedStorage:WaitForChild("Modules")
+local WaitModule = Modules:WaitForChild("WaitModule")
 
 local SmoothSurface = Enum.SurfaceType.Smooth
 
@@ -8,12 +14,14 @@ local V3New = Vector3.new
 local V2New = Vector2.new
 
 local insert = table.insert
-local setmt = setmetatable
 
 local noise = math.noise
 local abs = math.abs
 
-ChunkModule.Size = V2New(24, 24)
+local setmt = setmetatable
+local r = require
+
+local Wait = r(WaitModule)
 
 function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Model, Wedge1, Wedge2)
     local Model = Model or INew("Model")
@@ -66,24 +74,26 @@ function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name,
     return Model, Wedge1, Wedge2
 end
 
-function ChunkModule:CreateGrid()
+function ChunkModule.new(ChunkSize : Vector2?, ...)
+    ChunkSize = ChunkSize or V2New(16, 16)
+
+    local Chunk = {Instances = {}}
+    setmt(Chunk, ChunkModule)
+    
     local PositionGrid = {}
-    for XPos = 0, ChunkModule.Size.X do
+    for XPos = 0, ChunkSize.X do
         local Grid = {}
-        for ZPos = 0, ChunkModule.Size.Y do
+        for ZPos = 0, ChunkSize.Y do
             Grid[ZPos] = V3New(XPos * 5, noise(XPos / 10, ZPos / 10) * 25, ZPos * 5)
         end
 
         PositionGrid[XPos] = Grid
     end
-    return PositionGrid
-end
-function ChunkModule:CreateTriangles(PositionGrid, ...)
-    for XPos = 0, ChunkModule.Size.X - 1 do
+    for XPos = 0, ChunkSize.X - 1 do
         local AddedX = PositionGrid[XPos + 1]
         local NormX = PositionGrid[XPos]
         
-        for ZPos = 0, ChunkModule.Size.Y - 1 do
+        for ZPos = 0, ChunkSize.Y - 1 do
             local AddZ = ZPos + 1
 
             local PosA = NormX[ZPos]
@@ -91,10 +101,24 @@ function ChunkModule:CreateTriangles(PositionGrid, ...)
             local PosC = NormX[AddZ]
             local PosD = AddedX[AddZ]
 
-            ChunkModule:DrawTriangle(PosA, PosB, PosC, ...)
-            ChunkModule:DrawTriangle(PosB, PosC, PosD, ...)
+            local ModelA = ChunkModule:DrawTriangle(PosA, PosB, PosC, ...)
+            local ModelB = ChunkModule:DrawTriangle(PosB, PosC, PosD, ...)
+            
+            insert(Chunk.Instances, ModelA)
+            insert(Chunk.Instances, ModelB)
         end
     end
+
+    return Chunk
+end
+function ChunkModule:Destroy(Modulo, Timer)
+    for Index, Instance in pairs(self.Instances) do
+        Instance:Destroy()
+        if Modulo and Index % Modulo == 0 then
+            Wait:Wait(Timer)
+        end
+    end
+    warn("Chunk instances destroyed")
 end
 
 return ChunkModule

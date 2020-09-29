@@ -23,10 +23,12 @@ local r = require
 
 local Wait = r(WaitModule)
 
-ChunkModule.ChunkSize = V2New(16, 16)
+ChunkModule.ChunkSize = V2New(1, 1) * 16
 ChunkModule.Frequency = 25
 ChunkModule.Amplitude = 5
 ChunkModule.Divider = 10
+
+ChunkModule.WidthScale = ChunkModule.ChunkSize * ChunkModule.Amplitude
 
 local function GetHeight(ChunkPosition : Vector2, ChunkIndices : Vector2)
     return noise(
@@ -98,7 +100,11 @@ function ChunkModule.new(ChunkPosition : Vector2?, Parent, ...)
     local Model = INew("Folder")
     Model.Name = "Chunk"
 
-    local Chunk = {Instances = {Model}}
+    local Chunk =
+    {
+        Position = ChunkPosition;
+        Instances = {Model};
+    }
     setmt(Chunk, ChunkModule)
     
     local PositionGrid = {}
@@ -147,7 +153,6 @@ function ChunkModule:Destroy(Modulo, Timer)
             Wait:Wait(Timer)
         end
     end
-    warn("Chunk instances destroyed")
 end
 
 return ChunkModule

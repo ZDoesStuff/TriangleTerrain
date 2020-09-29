@@ -92,27 +92,39 @@ function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name,
     Wedge:Destroy()
     return Model, Wedge1, Wedge2
 end
+function ChunkModule.new(ChunkPosition : Vector2?, Parent, ...)
+    ChunkPosition = ChunkPosition or V2New()
 
-function ChunkModule.new(ChunkSize : Vector2?, ...)
-    ChunkSize = ChunkSize or V2New(16, 16)
+    local Model = INew("Folder")
+    Model.Name = "Chunk"
 
-    local Chunk = {Instances = {}}
+    local Chunk = {Instances = {Model}}
     setmt(Chunk, ChunkModule)
     
     local PositionGrid = {}
-    for XPos = 0, ChunkSize.X do
+    for XPos = 0, ChunkModule.ChunkSize.X do
         local Grid = {}
-        for ZPos = 0, ChunkSize.Y do
-            Grid[ZPos] = V3New(XPos * 5, noise(XPos / 10, ZPos / 10) * 25, ZPos * 5)
-        end
 
+        local AmpedSizeX = ChunkPosition.X * ChunkModule.ChunkSize.X * ChunkModule.Amplitude
+        local AmpedX = XPos * ChunkModule.Amplitude
+
+        local FinalX = AmpedSizeX + AmpedX
+
+        for ZPos = 0, ChunkModule.ChunkSize.Y do
+            local AmpedSizeZ = ChunkPosition.Y * ChunkModule.ChunkSize.Y * ChunkModule.Amplitude
+            local AmpedZ = ZPos * ChunkModule.Amplitude
+
+            local FinalZ = AmpedSizeZ + AmpedZ
+
+            Grid[ZPos] = GetPosition(ChunkPosition, V2New(XPos, ZPos), V2New(FinalX, FinalZ))
+        end
         PositionGrid[XPos] = Grid
     end
-    for XPos = 0, ChunkSize.X - 1 do
+    for XPos = 0, ChunkModule.ChunkSize.X - 1 do
         local AddedX = PositionGrid[XPos + 1]
         local NormX = PositionGrid[XPos]
         
-        for ZPos = 0, ChunkSize.Y - 1 do
+        for ZPos = 0, ChunkModule.ChunkSize.Y - 1 do
             local AddZ = ZPos + 1
 
             local PosA = NormX[ZPos]
@@ -120,14 +132,12 @@ function ChunkModule.new(ChunkSize : Vector2?, ...)
             local PosC = NormX[AddZ]
             local PosD = AddedX[AddZ]
 
-            local ModelA = ChunkModule:DrawTriangle(PosA, PosB, PosC, ...)
-            local ModelB = ChunkModule:DrawTriangle(PosB, PosC, PosD, ...)
-            
-            insert(Chunk.Instances, ModelA)
-            insert(Chunk.Instances, ModelB)
+            ChunkModule:DrawTriangle(PosA, PosB, PosC, Model, ...)
+            ChunkModule:DrawTriangle(PosB, PosC, PosD, Model, ...)
         end
     end
 
+    Model.Parent = Parent
     return Chunk
 end
 function ChunkModule:Destroy(Modulo, Timer)

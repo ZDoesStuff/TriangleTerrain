@@ -23,6 +23,25 @@ local r = require
 
 local Wait = r(WaitModule)
 
+ChunkModule.ChunkSize = V2New(16, 16)
+ChunkModule.Frequency = 25
+ChunkModule.Amplitude = 5
+ChunkModule.Divider = 10
+
+local function GetHeight(ChunkPosition : Vector2, ChunkIndices : Vector2)
+    return noise(
+        (ChunkModule.ChunkSize.X / ChunkModule.Divider * ChunkPosition.X) + ChunkIndices.X / ChunkModule.Divider,
+        (ChunkModule.ChunkSize.Y / ChunkModule.Divider * ChunkPosition.Y) + ChunkIndices.Y / ChunkModule.Divider
+    ) * ChunkModule.Frequency
+end
+local function GetPosition(ChunkPosition : Vector2, ChunkIndices : Vector2, FinalVectors : Vector2)
+    return V3New(
+        FinalVectors.X,
+        GetHeight(ChunkPosition, ChunkIndices),
+        FinalVectors.Y
+    )
+end
+
 function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Model, Wedge1, Wedge2)
     local Model = Model or INew("Model")
     Model.Name = Name or "Triangles"

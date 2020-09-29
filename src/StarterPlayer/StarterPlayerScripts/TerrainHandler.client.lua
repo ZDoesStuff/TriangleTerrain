@@ -10,7 +10,6 @@ local Terrain = workspace:WaitForChild("Terrain")
 local Triangles = Terrain:WaitForChild("Triangles")
 
 local Player = Players.LocalPlayer
-
 local V2New = Vector2.new
 
 local insert = table.insert
@@ -22,9 +21,9 @@ local abs = math.abs
 
 local r = require
 
-local RenderDistance = 2
+local RenderDistance = 12
 local ChunksPerTick = 4
-local Delay = .025
+local Delay = 0
 
 local Position = V2New()
 

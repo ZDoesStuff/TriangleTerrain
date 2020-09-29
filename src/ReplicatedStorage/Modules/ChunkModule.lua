@@ -6,9 +6,13 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Modules = ReplicatedStorage:WaitForChild("Modules")
 local WaitModule = Modules:WaitForChild("WaitModule")
 
+local SmoothMaterial = Enum.Material.SmoothPlastic
 local SmoothSurface = Enum.SurfaceType.Smooth
+local GrassMaterial = Enum.Material.Grass
+local SandMaterial = Enum.Material.Sand
 
 local FromMatrix = CFrame.fromMatrix
+local C3RGB = Color3.fromRGB
 local INew = Instance.new
 local V3New = Vector3.new
 local V2New = Vector2.new
@@ -23,12 +27,19 @@ local r = require
 
 local Wait = r(WaitModule)
 
-ChunkModule.ChunkSize = V2New(1, 1) * 16
-ChunkModule.Frequency = 25
-ChunkModule.Amplitude = 5
-ChunkModule.Divider = 10
+ChunkModule.ChunkSize = V2New(1, 1) * 4
+ChunkModule.Frequency = 100
+ChunkModule.Amplitude = 15
+ChunkModule.Divider = 20
 
 ChunkModule.WidthScale = ChunkModule.ChunkSize * ChunkModule.Amplitude
+ChunkModule.HeightColors =
+{
+    [-50] = {C3RGB(200, 200, 150), SandMaterial}; -- Yellow
+    [-10] = {C3RGB(75, 100, 50), GrassMaterial}; -- Green
+    [75] = {C3RGB(75, 80, 85), GrassMaterial}; -- Green
+    [0] = {C3RGB(75, 100, 50), GrassMaterial}; -- Grey
+}
 
 local function GetHeight(ChunkPosition : Vector2, ChunkIndices : Vector2)
     return noise(
@@ -42,6 +53,58 @@ local function GetPosition(ChunkPosition : Vector2, ChunkIndices : Vector2, Fina
         GetHeight(ChunkPosition, ChunkIndices),
         FinalVectors.Y
     )
+end
+
+local function ColorTriangle(Model, Color : Color3, Material : Enum.Material?)
+    Material = Material or SmoothMaterial
+    for _, Part in pairs(Model:GetChildren()) do
+        Part.Material = Material
+        Part.Color = Color
+    end
+end
+local function PaintTriangle(Triangle)
+    local Position = Triangle:GetPrimaryPartCFrame()
+    local TriangleHeight = Position.Y
+
+    local HigherHeight = nil
+    local LowerHeight = nil
+
+    local Material = nil
+    local Color = nil
+
+    for Height, HeightColor in pairs(ChunkModule.HeightColors) do
+        if TriangleHeight == Height then
+            Material = HeightColor[2]
+            Color = HeightColor[1]
+
+            break
+        end
+
+        if TriangleHeight < Height and (not HigherHeight or Height < HigherHeight) then
+            HigherHeight = Height
+        end
+        if TriangleHeight > Height and (not LowerHeight or Height > LowerHeight) then
+            LowerHeight = Height
+        end
+    end
+    if not Color then
+        if not HigherHeight then
+            local HeightItem = ChunkModule.HeightColors[LowerHeight]
+            Color, Material = HeightItem[1], HeightItem[2]
+        elseif not LowerHeight then
+            local HeightItem = ChunkModule.HeightColors[HigherHeight]
+            Color, Material = HeightItem[1], HeightItem[2]
+        else
+            local Alpha = (TriangleHeight - LowerHeight) / (HigherHeight - LowerHeight)
+
+            local HigherHeightItem = ChunkModule.HeightColors[HigherHeight]
+            local LowerHeightItem = ChunkModule.HeightColors[LowerHeight]
+            
+            Material = Alpha > .5 and HigherHeightItem[2] or LowerHeightItem[2]
+            Color = LowerHeightItem[1]:Lerp(HigherHeightItem[1], Alpha)
+        end
+    end
+    ColorTriangle(Triangle, Color, Material)
 end
 
 function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Model, Wedge1, Wedge2)
@@ -138,8 +201,11 @@ function ChunkModule.new(ChunkPosition : Vector2?, Parent, ...)
             local PosC = NormX[AddZ]
             local PosD = AddedX[AddZ]
 
-            ChunkModule:DrawTriangle(PosA, PosB, PosC, Model, ...)
-            ChunkModule:DrawTriangle(PosB, PosC, PosD, Model, ...)
+            local TriangleA = ChunkModule:DrawTriangle(PosA, PosB, PosC, Model, ...)
+            local TriangleB = ChunkModule:DrawTriangle(PosB, PosC, PosD, Model, ...)
+
+            PaintTriangle(TriangleA)
+            PaintTriangle(TriangleB)
         end
     end
 

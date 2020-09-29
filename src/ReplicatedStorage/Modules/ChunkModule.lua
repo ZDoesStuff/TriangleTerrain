@@ -5,12 +5,18 @@ local SmoothSurface = Enum.SurfaceType.Smooth
 local FromMatrix = CFrame.fromMatrix
 local INew = Instance.new
 local V3New = Vector3.new
+local V2New = Vector2.new
 
+local insert = table.insert
 local setmt = setmetatable
+
+local noise = math.noise
 local abs = math.abs
 
-local function DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Wedge1, Wedge2)
-    local Model = INew("Model")
+ChunkModule.Size = V2New(24, 24)
+
+function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Model, Wedge1, Wedge2)
+    local Model = Model or INew("Model")
     Model.Name = Name or "Triangles"
 
     local Wedge = INew("WedgePart")
@@ -57,9 +63,38 @@ local function DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Wedge
     Model.Parent = Parent
 
     Wedge:Destroy()
-
-    return Wedge1, Wedge2, Model
+    return Model, Wedge1, Wedge2
 end
--- DrawTriangle(workspace.A.Position, workspace.B.Position, workspace.C.Position, workspace)
+
+function ChunkModule:CreateGrid()
+    local PositionGrid = {}
+    for XPos = 0, ChunkModule.Size.X do
+        local Grid = {}
+        for ZPos = 0, ChunkModule.Size.Y do
+            Grid[ZPos] = V3New(XPos * 5, noise(XPos / 10, ZPos / 10) * 25, ZPos * 5)
+        end
+
+        PositionGrid[XPos] = Grid
+    end
+    return PositionGrid
+end
+function ChunkModule:CreateTriangles(PositionGrid, ...)
+    for XPos = 0, ChunkModule.Size.X - 1 do
+        local AddedX = PositionGrid[XPos + 1]
+        local NormX = PositionGrid[XPos]
+        
+        for ZPos = 0, ChunkModule.Size.Y - 1 do
+            local AddZ = ZPos + 1
+
+            local PosA = NormX[ZPos]
+            local PosB = AddedX[ZPos]
+            local PosC = NormX[AddZ]
+            local PosD = AddedX[AddZ]
+
+            ChunkModule:DrawTriangle(PosA, PosB, PosC, ...)
+            ChunkModule:DrawTriangle(PosB, PosC, PosD, ...)
+        end
+    end
+end
 
 return ChunkModule

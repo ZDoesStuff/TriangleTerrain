@@ -24,7 +24,8 @@ local abs = math.abs
 local r = require
 
 local RenderDistance = 12
-local ChunksPerTick = 4
+local ChunksPerTick = 8
+
 local Delay = 0
 
 local Position = V2New()

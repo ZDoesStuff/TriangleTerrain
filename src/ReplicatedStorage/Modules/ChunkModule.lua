@@ -4,9 +4,14 @@ ChunkModule.__index = ChunkModule
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Modules = ReplicatedStorage:WaitForChild("Modules")
+local Objects = ReplicatedStorage:WaitForChild("Objects")
+local SeedValue = ReplicatedStorage:WaitForChild("Seed")
+
 local WaitModule = Modules:WaitForChild("WaitModule")
+local Tree = Objects:WaitForChild("Tree")
 
 local Terrain = workspace:WaitForChild("Terrain")
+local Seed = SeedValue.Value
 
 local SmoothMaterial = Enum.Material.SmoothPlastic
 local SmoothSurface = Enum.SurfaceType.Smooth
@@ -14,8 +19,10 @@ local GrassMaterial = Enum.Material.Grass
 local SlateMaterial = Enum.Material.Slate
 local WaterMaterial = Enum.Material.Water
 local SandMaterial = Enum.Material.Sand
+local AirMaterial = Enum.Material.Air
 
 local FromMatrix = CFrame.fromMatrix
+local CFAng = CFrame.Angles
 local CFNew = CFrame.new
 
 local C3RGB = Color3.fromRGB
@@ -25,8 +32,11 @@ local V2New = Vector2.new
 
 local insert = table.insert
 
+local randomseed = math.randomseed
+local random = math.random
 local noise = math.noise
 local abs = math.abs
+local pi = math.pi
 
 local setmt = setmetatable
 local r = require
@@ -41,6 +51,13 @@ ChunkModule.Divider = 20
 ChunkModule.ExtrudeModifider = 1.25
 ChunkModule.ExtrudeHeight = 20
 
+ChunkModule.RandomOffset = 10
+ChunkModule.TreeDensity = .25
+ChunkModule.RandomAngle = .05
+
+ChunkModule.MinTree = -15
+ChunkModule.MaxTree = 30
+
 ChunkModule.SeaLevel = -80
 
 ChunkModule.WidthScale = ChunkModule.ChunkSize * ChunkModule.Amplitude
@@ -52,10 +69,18 @@ ChunkModule.HeightColors =
     [0] = {C3RGB(75, 100, 50), GrassMaterial, .5}; -- Green
 }
 
+local function GetRandom()
+    return random() * random(-ChunkModule.RandomOffset, ChunkModule.RandomOffset)
+end
+local function GetAngle()
+    return ChunkModule.RandomAngle * pi * random()
+end
+
 local function GetHeight(ChunkPosition : Vector2, ChunkIndices : Vector2)
     local Height = noise(
         (ChunkModule.ChunkSize.X / ChunkModule.Divider * ChunkPosition.X) + ChunkIndices.X / ChunkModule.Divider,
-        (ChunkModule.ChunkSize.Y / ChunkModule.Divider * ChunkPosition.Y) + ChunkIndices.Y / ChunkModule.Divider
+        (ChunkModule.ChunkSize.Y / ChunkModule.Divider * ChunkPosition.Y) + ChunkIndices.Y / ChunkModule.Divider,
+        Seed
     ) * ChunkModule.Frequency
 
     if Height > ChunkModule.ExtrudeHeight then
@@ -128,6 +153,7 @@ local function PaintTriangle(Triangle)
     end
     ColorTriangle(Triangle, Color, Material)
 end
+
 local function CreateWater(Chunk)
     local Multiplier = V2New(1, 1) * .5
 
@@ -136,6 +162,45 @@ local function CreateWater(Chunk)
 
     local ChunkCFrame = CFNew(ChunkWidth.X, ChunkModule.SeaLevel, ChunkWidth.Y)
     Terrain:FillBlock(ChunkCFrame, ChunkSize, WaterMaterial)
+
+    Chunk.Water =
+    {
+        CFrame = ChunkCFrame;
+        Size = ChunkSize;
+    }
+end
+local function CreateTrees(Chunk)
+    local PositionGrid = Chunk.PositionGrid
+    local Instances = Chunk.Instances
+
+    local Position = Chunk.Position
+    for PosX = 0, ChunkModule.ChunkSize.X - 1 do
+        for PosZ = 0, ChunkModule.ChunkSize.Y - 1 do
+            local GridPosition = PositionGrid[PosX][PosZ]
+            if GridPosition.Y >= ChunkModule.MinTree and GridPosition.Y <= ChunkModule.MaxTree then
+                randomseed(PosX * (Position.X + Seed) + PosZ * (Position.Y + Seed))
+                if random() < ChunkModule.TreeDensity then
+                    local TreeClone = Tree:Clone()
+                    local TreeCFrame = CFNew(GridPosition)
+                        * CFNew(
+                            GetRandom(),
+                            0,
+                            GetRandom()
+                        )
+                        * CFAng(
+                            GetAngle(),
+                            0,
+                            GetAngle()
+                        )
+
+                    TreeClone:SetPrimaryPartCFrame(TreeCFrame)
+                    TreeClone.Parent = Instances.Model
+
+                    insert(Instances, TreeClone)
+                end
+            end
+        end
+    end
 end
 
 function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Model, Wedge1, Wedge2)
@@ -197,11 +262,12 @@ function ChunkModule.new(ChunkPosition : Vector2?, Parent, ...)
     local Chunk =
     {
         Position = ChunkPosition;
-        Instances = {Model};
+        Instances = {Model = Model};
+        PositionGrid = {};
     }
     setmt(Chunk, ChunkModule)
     
-    local PositionGrid = {}
+    local PositionGrid = Chunk.PositionGrid -- Pointer
     for XPos = 0, ChunkModule.ChunkSize.X do
         local Grid = {}
 
@@ -241,8 +307,9 @@ function ChunkModule.new(ChunkPosition : Vector2?, Parent, ...)
     end
 
     CreateWater(Chunk)
-    Model.Parent = Parent
+    CreateTrees(Chunk)
 
+    Model.Parent = Parent
     return Chunk
 end
 function ChunkModule:Destroy(Modulo, Timer)
@@ -252,6 +319,7 @@ function ChunkModule:Destroy(Modulo, Timer)
             Wait:Wait(Timer)
         end
     end
+    Terrain:FillBlock(self.Water.CFrame, self.Water.Size, AirMaterial)
 end
 
 return ChunkModule

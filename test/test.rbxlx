@@ -1,0 +1,1279 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBXC37E2B1DF4644832A971F8BBDE214CCE">
+		<Properties>
+			<bool name="AllowThirdPartySales">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="CollisionGroups">Default^0^1</string>
+			<Ref name="CurrentCamera">RBXEF548E5937D345C59E34EBDB420A0BDF</Ref>
+			<double name="DistributedGameTime">0</double>
+			<bool name="ExplicitAutoJoints">true</bool>
+			<float name="FallenPartsDestroyHeight">-500</float>
+			<bool name="FilteringEnabled">true</bool>
+			<float name="Gravity">196.199997</float>
+			<token name="InterpolationThrottling">0</token>
+			<token name="LevelOfDetail">0</token>
+			<token name="MeshPartHeads">0</token>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<CoordinateFrame name="ModelMeshCFrame">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<Vector3 name="ModelMeshSize">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+			</Vector3>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<int64 name="SourceAssetId">-1</int64>
+			<bool name="StreamingEnabled">false</bool>
+			<int name="StreamingMinRadius">64</int>
+			<token name="StreamingPauseMode">0</token>
+			<int name="StreamingTargetRadius">1024</int>
+			<BinaryString name="Tags"></BinaryString>
+			<bool name="TerrainWeldsFixed">true</bool>
+		</Properties>
+		<Item class="Terrain" referent="RBX2C19ABAD12D846BE9F6393383DA55D10">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="CastShadow">true</bool>
+				<int name="CollisionGroupId">0</int>
+				<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
+				<PhysicalProperties name="CustomPhysicalProperties">
+					<CustomPhysics>false</CustomPhysics>
+				</PhysicalProperties>
+				<bool name="Decoration">false</bool>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<bool name="Massless">false</bool>
+				<token name="Material">256</token>
+				<BinaryString name="MaterialColors"><![CDATA[AAAAAAAAan8/P39rf2Y/ilY+j35fi21PZmxvZbDqw8faiVpHOi4kHh4lZlw76JxKc3trhHta
+gcLgc4RKxr21zq2UlJSM]]></BinaryString>
+				<string name="Name">Terrain</string>
+				<BinaryString name="PhysicsGrid">AgMAAAAAAAAAAAAAAAA=</BinaryString>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<int name="RootPriority">0</int>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<BinaryString name="SmoothGrid">AQU=</BinaryString>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<Color3 name="WaterColor">
+					<R>0.0470588282</R>
+					<G>0.329411775</G>
+					<B>0.360784322</B>
+				</Color3>
+				<float name="WaterReflectance">1</float>
+				<float name="WaterTransparency">0.300000012</float>
+				<float name="WaterWaveSize">0.150000006</float>
+				<float name="WaterWaveSpeed">10</float>
+				<Vector3 name="size">
+					<X>2044</X>
+					<Y>252</Y>
+					<Z>2044</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Folder" referent="RBX65D4C6A0583A4AFB9C7C1338C8A8597C">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<string name="Name">Triangles</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Camera" referent="RBXEF548E5937D345C59E34EBDB420A0BDF">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<CoordinateFrame name="CFrame">
+					<X>87.6178436</X>
+					<Y>117.600891</Y>
+					<Z>76.1101685</Z>
+					<R00>-0.182451785</R00>
+					<R01>-0.720097184</R01>
+					<R02>0.669456065</R02>
+					<R10>-0</R10>
+					<R11>0.680884838</R11>
+					<R12>0.732390523</R12>
+					<R20>-0.983214796</R20>
+					<R21>0.133625954</R21>
+					<R22>-0.124228649</R22>
+				</CoordinateFrame>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<float name="FieldOfView">70</float>
+				<CoordinateFrame name="Focus">
+					<X>86.278923</X>
+					<Y>116.136101</Y>
+					<Z>76.3586273</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="HeadLocked">true</bool>
+				<float name="HeadScale">1</float>
+				<string name="Name">Camera</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="SoundService" referent="RBX7775718C581848189485E1F09564A0EE">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<float name="DistanceFactor">3.32999992</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">SoundService</string>
+			<bool name="RespectFilteringEnabled">true</bool>
+			<float name="RolloffScale">1</float>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="NonReplicatedCSGDictionaryService" referent="RBX64211ED82F1C4742980BCDC21BD2795A">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">NonReplicatedCSGDictionaryService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="CSGDictionaryService" referent="RBXE5A38C4B2BEC473488CE4195FBFEB2FD">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">CSGDictionaryService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Chat" referent="RBX8BFA04E259C54BC9BF062DCB569B4AD8">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="BubbleChatEnabled">false</bool>
+			<bool name="LoadDefaultChat">true</bool>
+			<string name="Name">Chat</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="TimerService" referent="RBXC2A1E5BDB13544D2A447C6CABDF7C038">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Instance</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBXB56F3DB8844341C8BFA3E46B63CCBDE4">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="CharacterAutoLoads">true</bool>
+			<int name="MaxPlayersInternal">30</int>
+			<string name="Name">Players</string>
+			<int name="PreferredPlayersInternal">30</int>
+			<float name="RespawnTime">5</float>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ReplicatedFirst" referent="RBX94706DD39489450B90F97F30C986D721">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">ReplicatedFirst</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="TweenService" referent="RBXB1EEE5CB65324C9E92CAB4D462B5B12D">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">TweenService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="PermissionsService" referent="RBXE7E30A17FA044AA79914C61C0C504230">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">PermissionsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="StudioData" referent="RBX2FB1E391A63E445EB2AC4934836C13CC">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<int64 name="CommitInflightAuthorId">0</int64>
+			<string name="CommitInflightGuid"></string>
+			<int name="CommitInflightPlaceVersion">0</int>
+			<bool name="EnableScriptCollabByDefaultOnLoad">false</bool>
+			<bool name="EnableScriptCollabOnLoad">false</bool>
+			<bool name="EnableScriptCollabVersionHistoryOnLoad">false</bool>
+			<string name="Name">StudioData</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<int64 name="SrcPlaceId">5758000226</int64>
+			<int64 name="SrcUniverseId">2042299339</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="StarterPlayer" referent="RBXAA0BAF334F9F497DB78E1BCB25076832">
+		<Properties>
+			<bool name="AllowCustomAnimations">true</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="AutoJumpEnabled">true</bool>
+			<float name="CameraMaxZoomDistance">128</float>
+			<float name="CameraMinZoomDistance">0.5</float>
+			<token name="CameraMode">0</token>
+			<float name="CharacterJumpHeight">7.19999981</float>
+			<float name="CharacterJumpPower">50</float>
+			<float name="CharacterMaxSlopeAngle">89</float>
+			<bool name="CharacterUseJumpPower">true</bool>
+			<float name="CharacterWalkSpeed">16</float>
+			<token name="DevCameraOcclusionMode">0</token>
+			<token name="DevComputerCameraMovementMode">0</token>
+			<token name="DevComputerMovementMode">0</token>
+			<token name="DevTouchCameraMovementMode">0</token>
+			<token name="DevTouchMovementMode">0</token>
+			<bool name="EnableMouseLockOption">true</bool>
+			<int64 name="GameSettingsAssetIDFace">0</int64>
+			<int64 name="GameSettingsAssetIDHead">0</int64>
+			<int64 name="GameSettingsAssetIDLeftArm">0</int64>
+			<int64 name="GameSettingsAssetIDLeftLeg">0</int64>
+			<int64 name="GameSettingsAssetIDPants">0</int64>
+			<int64 name="GameSettingsAssetIDRightArm">0</int64>
+			<int64 name="GameSettingsAssetIDRightLeg">0</int64>
+			<int64 name="GameSettingsAssetIDShirt">0</int64>
+			<int64 name="GameSettingsAssetIDTeeShirt">0</int64>
+			<int64 name="GameSettingsAssetIDTorso">0</int64>
+			<token name="GameSettingsAvatar">1</token>
+			<token name="GameSettingsR15Collision">0</token>
+			<NumberRange name="GameSettingsScaleRangeBodyType">0 1 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeHead">0.95 1 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeHeight">0.9 1.05 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeProportion">0 1 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeWidth">0.7 1 </NumberRange>
+			<float name="HealthDisplayDistance">100</float>
+			<bool name="LoadCharacterAppearance">true</bool>
+			<string name="Name">StarterPlayer</string>
+			<float name="NameDisplayDistance">100</float>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<bool name="UserEmotesEnabled">true</bool>
+		</Properties>
+		<Item class="StarterPlayerScripts" referent="RBXF44C5822F9FC4861A2085DECFB4221D8">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<string name="Name">StarterPlayerScripts</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="LocalScript" referent="RBX191ED5BC1455412AB576D9D6F5F0A004">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">TerrainHandler</string>
+					<string name="ScriptGuid">{AB5F3BB9-8F1D-41B5-90E3-8328450EB656}</string>
+					<ProtectedString name="Source"><![CDATA[local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+
+local Modules = ReplicatedStorage:WaitForChild("Modules")
+local ChunkModule = Modules:WaitForChild("ChunkModule")
+local WaitModule = Modules:WaitForChild("WaitModule")
+
+local Terrain = workspace:WaitForChild("Terrain")
+local Triangles = Terrain:WaitForChild("Triangles")
+
+local Player = Players.LocalPlayer
+local V2New = Vector2.new
+
+local insert = table.insert
+local remove = table.remove
+local find = table.find
+
+local floor = math.floor
+local abs = math.abs
+
+local r = require
+
+local RenderDistance = 12
+local ChunksPerTick = 4
+local Delay = 0
+
+local Position = V2New()
+
+local Chunks = r(ChunkModule)
+local Wait = r(WaitModule)
+
+local CharacterList = {}
+local ChunkList = {}
+
+local LoadFast = true
+local ChunkCount = 0
+
+local function Round(Vector : Vector2, Rounder : Vector2)
+    return V2New(floor(Vector.X / Rounder.X), floor(Vector.Y / Rounder.Y))
+end
+
+local function GetChunkPosition(Position : Vector3)
+    return Round(V2New(Position.X, Position.Z), Chunks.WidthScale)
+end
+local function GetLocalChunkPosition()
+    local Character = Player.Character
+    local RootPart = Character and Character:FindFirstChild("HumanoidRootPart")
+
+    return RootPart and GetChunkPosition(RootPart.Position) or V2New(), RootPart
+end
+
+local function DelayNextChunk()
+    ChunkCount = (ChunkCount + 1) % ChunksPerTick
+    if ChunkCount == 0 and not LoadFast then
+        Wait:Wait(Delay)
+    end
+end
+
+local function ChunkExists(Position : Vector2)
+    for _, Chunk in pairs(ChunkList) do
+        if Chunk.Position == Position then
+            return true
+        end
+    end
+    return false
+end
+local function ChunkOutOfRange(Chunk, Position : Vector2)
+    local ChunkPos = Chunk.Position
+    return abs(ChunkPos.X - Position.X) > RenderDistance or abs(ChunkPos.Y - Position.Y) > RenderDistance
+end
+
+local function LoadChunks(vPosition : Vector2?)
+    local Position = vPosition or V2New()
+    for XPos = Position.X - RenderDistance, Position.X + RenderDistance do
+        for ZPos = Position.Y - RenderDistance, Position.Y + RenderDistance do
+            local VectorPosition = V2New(XPos, ZPos)
+            if not ChunkExists(VectorPosition) then
+                insert(ChunkList, Chunks.new(VectorPosition, Triangles))
+                DelayNextChunk()
+            end
+        end
+    end
+end
+local function UnloadChunks()
+    local Position, RootPart = GetLocalChunkPosition()
+
+    local TotalChunks = #ChunkList
+    local Length = 0
+    
+    for Index = 1, TotalChunks do
+        local Chunk = ChunkList[Index]
+        if not RootPart or ChunkOutOfRange(Chunk, Position) then
+            Chunk:Destroy()
+            DelayNextChunk()
+
+            ChunkList[Index] = nil
+        end
+    end
+    for Index = 1, TotalChunks do
+        local Chunk = ChunkList[Index]
+        if Chunk then
+            Length += 1
+            ChunkList[Length] = Chunk
+        end
+    end
+
+    for Index = Length + 1, TotalChunks do
+        ChunkList[Index] = nil
+    end
+end
+
+while true do
+    local Position, RootPart = GetLocalChunkPosition()
+
+    UnloadChunks()
+    if Position and RootPart then
+        LoadChunks(Position)
+        LoadFast = false
+    end
+
+    Wait:Wait(.5)
+end]]></ProtectedString>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="StarterCharacterScripts" referent="RBXBBC265B413AD4F1B8D1CC47BF7E5F263">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<string name="Name">StarterCharacterScripts</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="StarterPack" referent="RBX581B41BEAA8C4673A6F9946772ADB846">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">StarterPack</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBX2D14F12A748D4C75ABBC345795C377AE">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">StarterGui</string>
+			<bool name="ResetPlayerGuiOnSpawn">true</bool>
+			<token name="ScreenOrientation">2</token>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+		<Item class="ScreenGui" referent="RBXEDBD545794D54418AD77B5DA944A98E8">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<bool name="AutoLocalize">true</bool>
+				<int name="DisplayOrder">100</int>
+				<bool name="Enabled">true</bool>
+				<bool name="IgnoreGuiInset">true</bool>
+				<string name="Name">UI</string>
+				<bool name="ResetOnSpawn">false</bool>
+				<Ref name="RootLocalizationTable">null</Ref>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<token name="ZIndexBehavior">0</token>
+			</Properties>
+			<Item class="Sound" referent="RBX3B989D7B3ACE414988E65A630DCB6BD6">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<float name="EmitterSize">0</float>
+					<bool name="Looped">true</bool>
+					<string name="Name">Soundtrack</string>
+					<bool name="PlayOnRemove">false</bool>
+					<float name="PlaybackSpeed">1</float>
+					<bool name="Playing">false</bool>
+					<token name="RollOffMode">0</token>
+					<Ref name="SoundGroup">null</Ref>
+					<Content name="SoundId"><url>rbxassetid://4690765039</url></Content>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<double name="TimePosition">0</double>
+					<float name="Volume">0.100000001</float>
+					<float name="xmlRead_MaxDistance_3">0</float>
+				</Properties>
+			</Item>
+			<Item class="Frame" referent="RBXD101052841D146429BDEDD05B4EA892D">
+				<Properties>
+					<bool name="Active">false</bool>
+					<Vector2 name="AnchorPoint">
+						<X>0</X>
+						<Y>0</Y>
+					</Vector2>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<bool name="AutoLocalize">true</bool>
+					<token name="AutomaticSize">0</token>
+					<Color3 name="BackgroundColor3">
+						<R>0</R>
+						<G>0</G>
+						<B>0</B>
+					</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">
+						<R>0.105882362</R>
+						<G>0.164705887</G>
+						<B>0.207843155</B>
+					</Color3>
+					<token name="BorderMode">0</token>
+					<int name="BorderSizePixel">0</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<int name="LayoutOrder">0</int>
+					<string name="Name">Frame</string>
+					<Ref name="NextSelectionDown">null</Ref>
+					<Ref name="NextSelectionLeft">null</Ref>
+					<Ref name="NextSelectionRight">null</Ref>
+					<Ref name="NextSelectionUp">null</Ref>
+					<UDim2 name="Position">
+						<XS>0</XS>
+						<XO>0</XO>
+						<YS>0</YS>
+						<YO>0</YO>
+					</UDim2>
+					<Ref name="RootLocalizationTable">null</Ref>
+					<float name="Rotation">0</float>
+					<bool name="Selectable">false</bool>
+					<Ref name="SelectionImageObject">null</Ref>
+					<UDim2 name="Size">
+						<XS>1</XS>
+						<XO>0</XO>
+						<YS>1</YS>
+						<YO>0</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<int64 name="SourceAssetId">-1</int64>
+					<token name="Style">0</token>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+			</Item>
+			<Item class="LocalScript" referent="RBX88E5936207A1488F8926EBA79A58FBC3">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Master</string>
+					<string name="ScriptGuid">{81948995-1572-4E4C-A9B7-BCBBAC7606B6}</string>
+					<ProtectedString name="Source"><![CDATA[local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ContentProvider = game:GetService("ContentProvider")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+
+local Modules = ReplicatedStorage:WaitForChild("Modules")
+local Loaded = ReplicatedStorage:WaitForChild("Loaded")
+
+local WaitModule = Modules:WaitForChild("WaitModule")
+local UI = script.Parent
+
+local Soundtrack = UI:WaitForChild("Soundtrack")
+local Frame = UI:WaitForChild("Frame")
+
+local TINew = TweenInfo.new
+local r = require
+
+local Wait = r(WaitModule)
+local Info = TINew(2)
+
+local Tweens =
+{
+	TweenService:Create(
+		Soundtrack,
+		Info,
+		{
+			Volume = .25;
+		}
+	);
+	TweenService:Create(
+		Frame,
+		Info,
+		{
+			BackgroundTransparency = 1;
+		}
+	);
+}
+
+repeat RunService.RenderStepped:Wait() until Loaded.Value == true
+Wait:Wait(2)
+
+print("receiver home cleanaer")
+Soundtrack.Volume = 0
+Soundtrack:Play()
+
+for Index, Tween in pairs(Tweens) do
+	Tween:Play()
+	if Index >= #Tweens then
+		Tween.Completed:Wait()
+	end
+end
+Frame:Destroy()]]></ProtectedString>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="LocalizationService" referent="RBX1F29AB649F3D48F78DD1A7C4F6E23AFC">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">LocalizationService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="TeleportService" referent="RBX3F7C85CC4C154FDF8FEA43B3E62BBB53">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Teleport Service</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="CollectionService" referent="RBX92C5646543FE4D57A8643E156FB7959C">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">CollectionService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBXEB589D68EBFF4D0C81F3B291F1199866">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">PhysicsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBXC99895C3F06A497DA625FB309A1E54C2">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Geometry</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="InsertService" referent="RBXD8CD9FF5DC794DEBB6BA2DC64B1F49B8">
+		<Properties>
+			<bool name="AllowClientInsertModels">false</bool>
+			<bool name="AllowInsertFreeModels">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">InsertService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="GamePassService" referent="RBXC98439DC93F74E0F8C64326C5420ECF5">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">GamePassService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX75FC99DA6B194B9FB58141B11178AB1C">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<int name="MaxItems">1000</int>
+			<string name="Name">Debris</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBXC4B21B9A7C684E08A18436DEF0A6A351">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">CookiesService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="VRService" referent="RBX1C125092101142C5A2BD7390AD127E5C">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">VRService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ContextActionService" referent="RBX4278FBECE2D743C3B32E21673CA054DB">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">ContextActionService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ScriptService" referent="RBX5914F61F039248008DEDAFD85B09D4D1">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Instance</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="AssetService" referent="RBX39A99A2471FA422D9B44634964B09C33">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">AssetService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="TouchInputService" referent="RBXF238367BABF14A99AF4186875D2E2FF8">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">TouchInputService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="AnalyticsService" referent="RBX879CEAC93F8A43FF80BF66EAE84B7F82">
+		<Properties>
+			<string name="ApiKey"></string>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">AnalyticsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX43CD2DF8A82E4FBC9F6BEA25362E16F2">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Selection</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ServerScriptService" referent="RBXFF757C1A52894A208F07912E6CA8CAB6">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="LoadStringEnabled">false</bool>
+			<string name="Name">ServerScriptService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ServerStorage" referent="RBX0292C690C6144497A919F189D3AF23B9">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">ServerStorage</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ReplicatedStorage" referent="RBX458501B09FAB47478C3540DAA1AFAAE6">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">ReplicatedStorage</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+		<Item class="Folder" referent="RBXB1F3A7C7ADB94C8BA08771C259A564A4">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<string name="Name">Modules</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="ModuleScript" referent="RBX5EE59BC993F7447185D1B2C70EC1EF3C">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">ChunkModule</string>
+					<string name="ScriptGuid">{A3685AE0-62FA-4969-B2AE-F17C0C3FF8CA}</string>
+					<ProtectedString name="Source"><![CDATA[local ChunkModule = {}
+ChunkModule.__index = ChunkModule
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Modules = ReplicatedStorage:WaitForChild("Modules")
+local WaitModule = Modules:WaitForChild("WaitModule")
+
+local Terrain = workspace:WaitForChild("Terrain")
+
+local SmoothMaterial = Enum.Material.SmoothPlastic
+local SmoothSurface = Enum.SurfaceType.Smooth
+local GrassMaterial = Enum.Material.Grass
+local SlateMaterial = Enum.Material.Slate
+local WaterMaterial = Enum.Material.Water
+local SandMaterial = Enum.Material.Sand
+
+local FromMatrix = CFrame.fromMatrix
+local CFNew = CFrame.new
+
+local C3RGB = Color3.fromRGB
+local INew = Instance.new
+local V3New = Vector3.new
+local V2New = Vector2.new
+
+local insert = table.insert
+
+local noise = math.noise
+local abs = math.abs
+
+local setmt = setmetatable
+local r = require
+
+local Wait = r(WaitModule)
+
+ChunkModule.ChunkSize = V2New(1, 1) * 4
+ChunkModule.Frequency = 100
+ChunkModule.Amplitude = 15
+ChunkModule.Divider = 20
+
+ChunkModule.ExtrudeModifider = 1.25
+ChunkModule.ExtrudeHeight = 20
+
+ChunkModule.SeaLevel = -80
+
+ChunkModule.WidthScale = ChunkModule.ChunkSize * ChunkModule.Amplitude
+ChunkModule.HeightColors =
+{
+    [-50] = {C3RGB(200, 200, 150), SandMaterial, .25}; -- Yellow
+    [-10] = {C3RGB(75, 100, 50), GrassMaterial, .5}; -- Green
+    [75] = {C3RGB(75, 80, 85), SlateMaterial, .75}; -- Grey
+    [0] = {C3RGB(75, 100, 50), GrassMaterial, .5}; -- Green
+}
+
+local function GetHeight(ChunkPosition : Vector2, ChunkIndices : Vector2)
+    local Height = noise(
+        (ChunkModule.ChunkSize.X / ChunkModule.Divider * ChunkPosition.X) + ChunkIndices.X / ChunkModule.Divider,
+        (ChunkModule.ChunkSize.Y / ChunkModule.Divider * ChunkPosition.Y) + ChunkIndices.Y / ChunkModule.Divider
+    ) * ChunkModule.Frequency
+
+    if Height > ChunkModule.ExtrudeHeight then
+        local Diff = Height - ChunkModule.ExtrudeHeight
+        Height += (Diff * ChunkModule.ExtrudeModifider)
+    end
+    if Height < -ChunkModule.ExtrudeHeight then
+        local Diff = Height + ChunkModule.ExtrudeHeight
+        Height += (Diff * ChunkModule.ExtrudeModifider)
+    end
+
+    return Height
+end
+local function GetPosition(ChunkPosition : Vector2, ChunkIndices : Vector2, FinalVectors : Vector2)
+    return V3New(
+        FinalVectors.X,
+        GetHeight(ChunkPosition, ChunkIndices),
+        FinalVectors.Y
+    )
+end
+
+local function ColorTriangle(Model, Color : Color3, Material : Enum.Material?)
+    Material = Material or SmoothMaterial
+    for _, Part in pairs(Model:GetChildren()) do
+        Part.Material = Material
+        Part.Color = Color
+    end
+end
+local function PaintTriangle(Triangle)
+    local Position = Triangle:GetPrimaryPartCFrame()
+    local TriangleHeight = Position.Y
+
+    local HigherHeight = nil
+    local LowerHeight = nil
+
+    local Material = nil
+    local Color = nil
+
+    for Height, HeightColor in pairs(ChunkModule.HeightColors) do
+        if TriangleHeight == Height then
+            Material = HeightColor[2]
+            Color = HeightColor[1]
+
+            break
+        end
+
+        if TriangleHeight < Height and (not HigherHeight or Height < HigherHeight) then
+            HigherHeight = Height
+        end
+        if TriangleHeight > Height and (not LowerHeight or Height > LowerHeight) then
+            LowerHeight = Height
+        end
+    end
+    if not Color then
+        if not HigherHeight then
+            local HeightItem = ChunkModule.HeightColors[LowerHeight]
+            Color, Material = HeightItem[1], HeightItem[2]
+        elseif not LowerHeight then
+            local HeightItem = ChunkModule.HeightColors[HigherHeight]
+            Color, Material = HeightItem[1], HeightItem[2]
+        else
+            local Alpha = (TriangleHeight - LowerHeight) / (HigherHeight - LowerHeight)
+
+            local HigherHeightItem = ChunkModule.HeightColors[HigherHeight]
+            local LowerHeightItem = ChunkModule.HeightColors[LowerHeight]
+            
+            Material = Alpha > LowerHeightItem[3] and HigherHeightItem[2] or LowerHeightItem[2]
+            Color = LowerHeightItem[1]:Lerp(HigherHeightItem[1], Alpha)
+        end
+    end
+    ColorTriangle(Triangle, Color, Material)
+end
+local function CreateWater(Chunk)
+    local Multiplier = V2New(1, 1) * .5
+
+    local ChunkSize = V3New(ChunkModule.WidthScale.X, abs(ChunkModule.SeaLevel), ChunkModule.WidthScale.Y)
+    local ChunkWidth = (Chunk.Position + Multiplier) * ChunkModule.WidthScale
+
+    local ChunkCFrame = CFNew(ChunkWidth.X, ChunkModule.SeaLevel, ChunkWidth.Y)
+    Terrain:FillBlock(ChunkCFrame, ChunkSize, WaterMaterial)
+end
+
+function ChunkModule:DrawTriangle(PositionA, PositionB, PositionC, Parent, Name, Model, Wedge1, Wedge2)
+    local Model = Model or INew("Model")
+    Model.Name = Name or "Triangles"
+
+    local Wedge = INew("WedgePart")
+    Wedge.BottomSurface = SmoothSurface
+    Wedge.TopSurface = SmoothSurface
+    Wedge.Name = "Triangle"
+    Wedge.Anchored = true
+
+    local function GetPositions()
+        return PositionB - PositionA, PositionC - PositionA, PositionC - PositionB
+    end
+    
+    local PosAB, PosAC, PosBC = GetPositions()
+    local DotABD, DotACD, DotBCD = PosAB:Dot(PosAB), PosAC:Dot(PosAC), PosBC:Dot(PosBC)
+
+    if DotABD > DotACD and DotABD > DotBCD then
+        PositionC, PositionA = PositionA, PositionC
+    elseif DotACD > DotBCD and DotACD > DotABD then
+        PositionA, PositionB = PositionB, PositionA
+    end
+
+    PosAB, PosAC, PosBC = GetPositions()
+
+    local RightVector = PosAC:Cross(PosAB).Unit
+    local UpVector = PosBC:Cross(RightVector).Unit
+    local BackVector = PosBC.Unit
+
+    local Height = abs(PosAB:Dot(UpVector))
+
+    local Wedge1 = Wedge1 or Wedge:Clone()
+    Wedge1.CFrame = FromMatrix((PositionA + PositionB) / 2, RightVector, UpVector, BackVector)
+    Wedge1.Size = V3New(0, Height, abs(PosAB:Dot(BackVector)))
+    Wedge1.Name = Wedge.Name .. "A"
+
+    local Wedge2 = Wedge2 or Wedge:Clone()
+    Wedge2.CFrame = FromMatrix((PositionA + PositionC) / 2, -RightVector, UpVector, -BackVector)
+    Wedge2.Size = V3New(0, Height, abs(PosAC:Dot(BackVector)))
+    Wedge2.Name = Wedge.Name .. "B"
+
+    Wedge1.Parent = Model
+    Wedge2.Parent = Model
+
+    Model.PrimaryPart = Wedge1
+    Model.Parent = Parent
+
+    Wedge:Destroy()
+    return Model, Wedge1, Wedge2
+end
+function ChunkModule.new(ChunkPosition : Vector2?, Parent, ...)
+    ChunkPosition = ChunkPosition or V2New()
+
+    local Model = INew("Folder")
+    Model.Name = "Chunk"
+
+    local Chunk =
+    {
+        Position = ChunkPosition;
+        Instances = {Model};
+    }
+    setmt(Chunk, ChunkModule)
+    
+    local PositionGrid = {}
+    for XPos = 0, ChunkModule.ChunkSize.X do
+        local Grid = {}
+
+        local AmpedSizeX = ChunkPosition.X * ChunkModule.ChunkSize.X * ChunkModule.Amplitude
+        local AmpedX = XPos * ChunkModule.Amplitude
+
+        local FinalX = AmpedSizeX + AmpedX
+
+        for ZPos = 0, ChunkModule.ChunkSize.Y do
+            local AmpedSizeZ = ChunkPosition.Y * ChunkModule.ChunkSize.Y * ChunkModule.Amplitude
+            local AmpedZ = ZPos * ChunkModule.Amplitude
+
+            local FinalZ = AmpedSizeZ + AmpedZ
+
+            Grid[ZPos] = GetPosition(ChunkPosition, V2New(XPos, ZPos), V2New(FinalX, FinalZ))
+        end
+        PositionGrid[XPos] = Grid
+    end
+    for XPos = 0, ChunkModule.ChunkSize.X - 1 do
+        local AddedX = PositionGrid[XPos + 1]
+        local NormX = PositionGrid[XPos]
+        
+        for ZPos = 0, ChunkModule.ChunkSize.Y - 1 do
+            local AddZ = ZPos + 1
+
+            local PosA = NormX[ZPos]
+            local PosB = AddedX[ZPos]
+            local PosC = NormX[AddZ]
+            local PosD = AddedX[AddZ]
+
+            local TriangleA = ChunkModule:DrawTriangle(PosA, PosB, PosC, Model, ...)
+            local TriangleB = ChunkModule:DrawTriangle(PosB, PosC, PosD, Model, ...)
+
+            PaintTriangle(TriangleA)
+            PaintTriangle(TriangleB)
+        end
+    end
+
+    CreateWater(Chunk)
+    Model.Parent = Parent
+
+    return Chunk
+end
+function ChunkModule:Destroy(Modulo, Timer)
+    for Index, Instance in pairs(self.Instances) do
+        Instance:Destroy()
+        if Modulo and Index % Modulo == 0 then
+            Wait:Wait(Timer)
+        end
+    end
+end
+
+return ChunkModule]]></ProtectedString>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ModuleScript" referent="RBX17C7F455326E4FEBA313C04B818C6172">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">WaitModule</string>
+					<string name="ScriptGuid">{527F6611-CCF8-4763-9797-D98D4342740C}</string>
+					<ProtectedString name="Source"><![CDATA[local WaitModule = {}
+
+-- 56203888
+
+local RunService = game:GetService("RunService")
+
+local INew = Instance.new
+local osclock = os.clock
+
+local clamp = math.clamp
+local huge = math.huge
+
+local up = unpack
+local t = tick
+
+local Minimum = .01
+
+-- Yields for a certain amount of seconds before it stops.
+function WaitModule:Wait(Seconds)
+	local IsClient = RunService:IsClient()
+	local WaitType = IsClient and "RenderStepped" or "Stepped"
+	
+	Seconds = clamp(Seconds or Minimum, Minimum, huge)
+	
+	local OldTick = osclock()
+	local NewTick = OldTick + Seconds
+	
+	local WaitFunction = RunService[WaitType]
+	repeat WaitFunction:Wait() until osclock() >= NewTick
+	
+	return osclock() - OldTick
+end
+-- A better version of executing a function without stopping a script.
+function WaitModule:Spawn(Function, ...)
+	local Args = {...}
+	
+	local Bind = INew("BindableEvent")
+	Bind.Event:Connect(function()
+		Function(up(Args))
+	end)
+	
+	Bind:Fire()
+	Bind:Destroy()
+end
+-- Waits a certain amount of seconds without yielding to execute a function.
+-- If you don't want to yield, this is best used for execution.
+function WaitModule:Delay(Seconds, Function, ...)
+	local Args = {...}
+	
+	WaitModule:Spawn(function()
+		WaitModule:Wait(Seconds)
+		Function(up(Args))
+	end)
+end
+
+return WaitModule]]></ProtectedString>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="BoolValue" referent="RBX8C642D4A43C34C2786964B1A9A139154">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<string name="Name">Loaded</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<bool name="Value">false</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="LuaWebService" referent="RBXE0CCD61DFABE4CFF991E92B423120CED">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Instance</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="GuidRegistryService" referent="RBXB2DF0384B92E4652A41D9161C0638F73">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Instance</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX7450E492137D4995B03203AF3F1F1965">
+		<Properties>
+			<Color3 name="Ambient">
+				<R>0.490196109</R>
+				<G>0.490196109</G>
+				<B>0.490196109</B>
+			</Color3>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<float name="Brightness">2</float>
+			<Color3 name="ColorShift_Bottom">
+				<R>0</R>
+				<G>0</G>
+				<B>0</B>
+			</Color3>
+			<Color3 name="ColorShift_Top">
+				<R>0</R>
+				<G>0</G>
+				<B>0</B>
+			</Color3>
+			<float name="EnvironmentDiffuseScale">0.5</float>
+			<float name="EnvironmentSpecularScale">0.25</float>
+			<float name="ExposureCompensation">0</float>
+			<Color3 name="FogColor">
+				<R>1</R>
+				<G>1</G>
+				<B>1</B>
+			</Color3>
+			<float name="FogEnd">100000</float>
+			<float name="FogStart">0</float>
+			<float name="GeographicLatitude">50</float>
+			<bool name="GlobalShadows">true</bool>
+			<string name="Name">Lighting</string>
+			<Color3 name="OutdoorAmbient">
+				<R>0.501960814</R>
+				<G>0.501960814</G>
+				<B>0.501960814</B>
+			</Color3>
+			<bool name="Outlines">false</bool>
+			<float name="ShadowSoftness">1</float>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<token name="Technology">4</token>
+			<string name="TimeOfDay">14:00:00</string>
+		</Properties>
+	</Item>
+	<Item class="Teams" referent="RBX6B8ABABAD58C4C77828BF77762EB2FD8">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">Teams</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="TestService" referent="RBX2F6A482495AC48C2AC0B9737613ECA00">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="AutoRuns">true</bool>
+			<string name="Description"></string>
+			<bool name="ExecuteWithStudioRun">false</bool>
+			<bool name="Is30FpsThrottleEnabled">true</bool>
+			<bool name="IsPhysicsEnvironmentalThrottled">true</bool>
+			<bool name="IsSleepAllowed">true</bool>
+			<string name="Name">TestService</string>
+			<int name="NumberOfPlayers">0</int>
+			<double name="SimulateSecondsLag">0</double>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<double name="Timeout">10</double>
+		</Properties>
+	</Item>
+	<Item class="HttpService" referent="RBX2BAE31CB27564BF288ACC2897105F65C">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="HttpEnabled">false</bool>
+			<string name="Name">HttpService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="LanguageService" referent="RBXD5E8D56E60A84CEBAB81B2BA5BEEA6A2">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<string name="Name">LanguageService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<SharedStrings>
+		<SharedString md5="yuZpQdnvvUBOTYh1jqZ2cA=="></SharedString>
+	</SharedStrings>
+</roblox>

@@ -6,8 +6,6 @@ local Modules = ReplicatedStorage:WaitForChild("Modules")
 local ChunkModule = Modules:WaitForChild("ChunkModule")
 local WaitModule = Modules:WaitForChild("WaitModule")
 
-local Loaded = ReplicatedStorage:WaitForChild("Loaded")
-
 local Terrain = workspace:WaitForChild("Terrain")
 local Triangles = Terrain:WaitForChild("Triangles")
 
@@ -118,8 +116,6 @@ while true do
     UnloadChunks()
     if Position and RootPart then
         LoadChunks(Position)
-
-        Loaded.Value = true
         LoadFast = false
     end
 
